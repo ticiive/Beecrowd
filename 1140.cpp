@@ -5,6 +5,7 @@ using namespace std;
 
 int main(){
     string a,validador,caractere;
+    
 
     while (true)
     {
@@ -13,6 +14,7 @@ int main(){
         {
             break;
         }
+        validador = "Y";
         
         
         for ( int i = 0; i < a.size(); i++)
