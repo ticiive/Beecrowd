@@ -29,41 +29,32 @@ while (cin>>n)
             tamd++;
         }
     }
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
 
-            if (i>= tamd && i>= tame)
+    for (int i = 0; i < e.size(); i++)
+    {
+        for (int j = 0; j < e.size(); j++)
+        {
+            if (e[j]>e[i])
             {
-                break;
-            }
-            
-            if (i<tame)
-            {
-                if (e[j]>e[i])
-                {
                 aux = e[j];
                 e[j] = e[i];
                 e[i] = aux;
-                }
-                
-
             }
-            if (i<tamd)
+        }
+        
+    }
+    for (int i = 0; i < d.size(); i++)
+    {
+        for (int j = 0; j < d.size(); j++)
+        {
+            if (d[j]>d[i])
             {
-                if (d[j]>d[i])
-                {
                 aux = d[j];
                 d[j] = d[i];
                 d[i] = aux;
-                }
-                
             }
-
-            
-            
         }
+        
     }
     while (!e.empty() && !d.empty())
     {
