@@ -21,12 +21,13 @@ while (cin>>n)
     }
     for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < n/2; j++) // para evitar contar duplamente
         {
+
+            
             if (tamanhos[i] == tamanhos[j] && lados[i] != lados[j])
             {
-                tamanhos[i] = 3;
-                tamanhos[j] = 4;
+              
                 contador++;
             }
             
