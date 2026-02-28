@@ -6,6 +6,7 @@ using namespace std;
 int main(){
 
 int n,letra,preta,cont;
+string resp;
 vector<string> a;
 n = 1;
     while(n>0){
@@ -13,7 +14,7 @@ n = 1;
 
         for (int j = 0; j < n; j++)
         {
-            a.push_back("0");
+            
             preta = 0;
             cont++;
         
@@ -27,28 +28,34 @@ n = 1;
                 preta++;
                 if (i==0)
                 {
-                   a.insert(a.begin() + cont, "A");
+                   resp = "A";
                 }
                 if (i==1)
                 {
-                    a.insert(a.begin() + cont, "B");
+                    resp = "B";
                 }
                 if (i==2)
                 {
-                    a.insert(a.begin() + cont, "C");
+                    resp = "C";
                 }
                 if (i==3)
                 {
-                    a.insert(a.begin() + cont, "D");
+                    resp = "D";
                 }
                 if (i==4)
                 {
-                    a.insert(a.begin() + cont, "E");
+                    resp = "E";
                 }
             }
             if (i==4 && preta>1)
             {
-                a.insert(a.begin() + cont, "*");
+                a.push_back("*");
+            }else{
+                if (i==4)
+                {
+                a.push_back(resp);
+                    
+                }  
             }
             
         }
