@@ -39,7 +39,11 @@ int main(){
                 incremento++;
                 
             }
-            if (i==0)
+            
+            
+            
+        }
+        if (i==0)
             {
                 numeros.push_back(k[i]);
                 incrementos.push_back(incremento);
@@ -51,9 +55,6 @@ int main(){
                 }
                 
             }
-            
-            
-        }
         
     }
     
