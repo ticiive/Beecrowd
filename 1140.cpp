@@ -1,5 +1,6 @@
 #include <iostream>
 
+
 using namespace std;
 
 int main(){
@@ -23,23 +24,13 @@ int main(){
                     validador = "Y";
                 }else{
                     validador = "N";
+                    break;
                 }
                 
-            }
-            if (i==a.size()-1)
-            {
-                cout<<validador<<"\n";
-            }
-            
-            
+            }       
         }
+        cout<<validador<<"\n";
         
     }
     
-
-
-
-
-
-
 }
