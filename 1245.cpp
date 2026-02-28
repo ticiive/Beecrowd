@@ -19,30 +19,25 @@ while (cin>>n)
         lados += c;
 
     }
-    for (int i = 0; i < n/2; i++)
+    for (int i = 0; i < n; i++)
     {
-        for (int j = n/2; j < n; j++) // para evitar contar duplamente
+        for (int j = 0; j < n; j++) // para evitar contar duplamente
         {
 
             
             if (tamanhos[i] == tamanhos[j] && lados[i] != lados[j])
             {
-              tamanhos[i] = 3;
-              tamanhos[j] = 4;
+              tamanhos[i] = 3*j;
+              tamanhos[j] = 4*i;
                 contador++;
             }
             
         }
         
     }
-    cout<<contador<<"\n";
+    cout<<contador/2<<"\n";
     
     
 }
-
-
-
-
-
 
 }
