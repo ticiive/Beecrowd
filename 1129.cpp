@@ -17,6 +17,7 @@ n = 1;
             
             preta = 0;
             cont++;
+            resp = "*";
         
         for (int i = 0; i < 5; i++)
         {
