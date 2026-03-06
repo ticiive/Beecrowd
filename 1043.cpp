@@ -8,12 +8,13 @@ int main(){
     double a,b,c;
     cin>>a>>b>>c;
 
-    if (a+b>c | b+c>a | c+a>b)
+    if (c<=a+b | a<= b+c | b<=a+c)
     {
-        cout<<"Perimetro = "<<fixed<<setprecision(1)<<a+b+c<<"\n";
+        cout<<"Area = "<<fixed<<setprecision(1)<<((a+b)*c)/2<<"\n";
     }
     else{
-        cout<<"Area = "<<fixed<<setprecision(1)<<((a+b)*c)/2<<"\n";
+        
+        cout<<"Perimetro = "<<fixed<<setprecision(1)<<a+b+c<<"\n";
     }
     
 
