@@ -2,29 +2,35 @@
 
 using namespace std;
 
-int fib(int x){
-    if (x == 0)
-    {
-        return 0;
-    }
-    if (x == 1)
-    {
-        return 1;
-    }
-
-    return fib(x-1)+fib(x-2);
-    
-    
-}
 
 int main(){
 
     int n;
     cin>>n;
+    int x[n];
 
     for (int i = 0; i < n; i++)
     {
-        cout<<fib(n);
+        if (i==0){
+            x[i] = 0;
+        }else if (i==1)
+        {
+            x[i] = 1;
+        }else{
+            x[i] = x[i-1]+x[i-2];
+        }
+
+        if (i==n-1)
+        {
+            cout<<x[i]<<endl;
+        }else{
+        
+        cout<<x[i]<<" ";}
+
+        
+        
+        
+        
     }
     
 
