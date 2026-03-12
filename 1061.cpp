@@ -7,7 +7,7 @@ int main(){
     string str;
     int diainicio,diafim,horainicio,horafim,mininicio,minfim,seginicio,segfim;
     int dias,horas,min,seg;
-    cin>>str>>diainicio>>horainicio>>str>>mininicio>>str>>seginicio>>str>>diafim>>horafim>>str>>mininicio>>str>>seginicio;
+    cin>>str>>diainicio>>horainicio>>str>>mininicio>>str>>seginicio>>str>>diafim>>horafim>>str>>minfim>>str>>segfim;
 
     if (horafim>horainicio)
     {
@@ -21,7 +21,7 @@ int main(){
         }else{
         
         dias = diafim-diainicio-1;
-        horas = 24 - (horainicio+horafim);}
+        horas = 24 - (horainicio-horafim);}
     }
     if (mininicio<minfim)
     {
@@ -41,18 +41,17 @@ int main(){
     }else{
         if (seginicio == segfim)
         {
-            min = min +1;
             seg = 0;
         }else{
             min = min - 1;
-            seg = 60-(seginicio+segfim);
+            seg = 60-(seginicio-segfim);
         }
 
         
         
     }
 
-    cout<<diainicio<<endl<<diafim<<endl<<horainicio<<endl<<horafim<<endl<<mininicio<<endl<<minfim<<endl<<seginicio<<endl<<segfim<<endl;
+    
     cout<<dias<<" dia(s)\n"<<horas<<" hora(s)\n"<<min<<" minuto(s)\n"<<seg<<" segundo(s)\n";
     
     
