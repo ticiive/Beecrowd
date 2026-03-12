@@ -32,8 +32,14 @@ int main(){
             min = 0;
         }else{
         
-        min = 60 - (mininicio+minfim);
-        horas = horas - 1;
+        min = 60 - (mininicio-minfim);
+        if (horas == 0)
+        {
+            horas = 23;
+            dias = dias -1;
+        }else{
+        
+        horas = horas - 1;}
     }}
     if (seginicio<segfim)
     {
