@@ -58,34 +58,37 @@ while (true)
     }else{
         n = bia.size();
     }
-    while (!bia.empty()||!alice.empty())
+    while (!bia.empty()&&!alice.empty())
     {
 
         
-        bi = *next(bia.begin(),i);
-        ai = *next(alice.begin(),j);
+        bi = *bia.begin();
+        ai = *alice.begin();
         if (alice.count(bi)!=0)
         {
-            i++;
-            continue;
+            
+            
             bia.erase(bi);
             alice.erase(bi);
+            continue;
         }
         if (bia.count(ai)!=0)
         {
-            j++;
-            continue;
+            
+            
             bia.erase(ai);
             alice.erase(ai);
+            continue;
         }
         
         
         if (bi!=ai&&alice.count(bi)==0&&bia.count(ai)==0)
         {
             trocas++;
-            continue;
+            
             bia.erase(ai);
             alice.erase(bi);
+            continue;
 
         }
         
