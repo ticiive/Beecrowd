@@ -3,12 +3,19 @@
 using namespace std;
 
 int main(){
+
     int n,aux,x,soma;
-    cin>>n;
+    
+    while (cin>>n)
+    {
+        
+    
+    
     soma = 0;
+    int virus[n];
       
 
-    for (int i = 0; i < x; i++)
+    for (int i = 0; i < n; i++)
     {
         cin>>virus[i];
     }
@@ -33,13 +40,18 @@ int main(){
     {
         if (i%2==0)
         {
-        
-            soma = soma + (virus[i+1] - virus[i]);
+            if (i==n-1)
+            {
+                soma = soma+(virus[i]-virus[i-1]);
+            }else{
+            
+            soma = soma + (virus[i+1] - virus[i]);}
         }
         
     }
 
-    cout<<"SOMA.  "<<soma;
+    cout<<soma<<endl;
+}
     
     
     
