@@ -4,24 +4,9 @@ using namespace std;
 
 int main(){
     int n,aux,x,soma;
-    cin>>x;
-
-    if (x%2!=0)
-    {
-        n = x+1;
-    }else{
-        n = x;
-    }
-    
-    
-    int virus[n];
-    if (x !=n)
-    {
-        virus[x] = 1001;
-    }
-    
-    
-    
+    cin>>n;
+    soma = 0;
+      
 
     for (int i = 0; i < x; i++)
     {
@@ -42,20 +27,19 @@ int main(){
         }
         
     }
-    if (x!=n)
-    {
-        virus[x] = virus[x-1];
-    }
     
 
     for (int i = 0; i < n; i++)
     {
         if (i%2==0)
         {
-            virus[i]
+        
+            soma = soma + (virus[i+1] - virus[i]);
         }
         
     }
+
+    cout<<"SOMA.  "<<soma;
     
     
     
