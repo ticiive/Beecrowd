@@ -1,5 +1,5 @@
 #include <iostream>
-int vec[70] = {0};
+long long vec[70] = {0};
 int fib(int n){
     if(n<=1){
         vec[n] = n;
@@ -20,7 +20,7 @@ int fib(int n){
 using namespace std;
 
 int main(){
-    int n,t;
+    int n, t;
 
     cin>>n;
 
