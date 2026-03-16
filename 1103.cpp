@@ -5,12 +5,23 @@ using namespace std;
 int main(){
 
     int h1,m1,h2,m2,minutos,horas;
-    horas = 0;
-    minutos = 0;
+  
 
+    
+
+
+    while (true)
+    {
+        
     cin>>h1>>m1>>h2>>m2;
 
-
+    if (h1==0&&h2==h1&&h2==m1&&m1==m2)
+    {
+        break;
+    }
+    
+    horas = 0;
+    minutos = 0;
     
     if (h1==h2)
     {
@@ -50,5 +61,6 @@ int main(){
     }
 
     cout<<(horas*60)+minutos<<endl;
+}
     
 }
