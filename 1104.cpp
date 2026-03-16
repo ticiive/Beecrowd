@@ -1,17 +1,29 @@
 #include <iostream>
 #include <vector>
+#include <set>
+#include <iterator>
 
 using namespace std;
 
 int main(){
 
-    int trocas,a,b,n,cin;
+    int trocas,a,b,n,ent;
+
+
+while (true)
+{
+    
 
 
     cin>>a>>b;
+    if (a==0&&b==0)
+    {
+        break;
+    }
+    
     trocas = 0;
 
-    vector<int> bia,alice;
+    set<int> bia,alice;
     if (a>b)
     {
         n = b;
@@ -23,32 +35,33 @@ int main(){
     {
         if (i<a)
         {
-            cin>>cin;
-            alice.push_back(cin);
-            if (alice[i]==alice[i-1])
-            {
-                alice.erase(alice.begin()+i);
-            }
+            cin>>ent;
+            alice.insert(ent);
+ 
             
         }else{
-            cin>>cin;
-            bia.push_back(cin);
-            if (bia[i-a]==bia[i-a-1])
-            {
-                bia.erase(bia.begin()+i-a);
-            }
+            cin>>ent;
+            bia.insert(ent);
+
             
         }
         
     }
 
+
+
+    if (alice.size()<bia.size())
+    {
+        n = alice.size();
+    }else{
+        n = bia.size();
+    }
     for ( int i = 0; i < n; i++)
     {
-        if (bia[i]!=alice[i])
+        if (next(bia.begin(),i)!=next(alice.begin(),i))
         {
             trocas++;
-            bia.erase(bia.begin()+i);
-            alice.erase(alice.begin()+i);
+
         }
         
         
@@ -57,7 +70,7 @@ int main(){
     cout<<trocas<<endl;
     
     
-    
+}
 
 
 
