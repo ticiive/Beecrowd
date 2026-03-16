@@ -7,12 +7,13 @@ using namespace std;
 
 int main(){
 
-    int trocas,a,b,n,ent;
+    int trocas,a,b,n,ent,bi,ai,i,j;
 
 
 while (true)
 {
-    
+    i = 0;
+    j=0;
 
 
     cin>>a>>b;
@@ -47,6 +48,7 @@ while (true)
         }
         
     }
+    
 
 
 
@@ -56,11 +58,34 @@ while (true)
     }else{
         n = bia.size();
     }
-    for ( int i = 0; i < n; i++)
+    while (!bia.empty()||!alice.empty())
     {
-        if (next(bia.begin(),i)!=next(alice.begin(),i))
+
+        
+        bi = *next(bia.begin(),i);
+        ai = *next(alice.begin(),j);
+        if (alice.count(bi)!=0)
+        {
+            i++;
+            continue;
+            bia.erase(bi);
+            alice.erase(bi);
+        }
+        if (bia.count(ai)!=0)
+        {
+            j++;
+            continue;
+            bia.erase(ai);
+            alice.erase(ai);
+        }
+        
+        
+        if (bi!=ai&&alice.count(bi)==0&&bia.count(ai)==0)
         {
             trocas++;
+            continue;
+            bia.erase(ai);
+            alice.erase(bi);
 
         }
         
