@@ -16,6 +16,7 @@ int main(){
         for (int k = n; k < m+1; k++)
         {
             aux = to_string(k);
+            valido = 1;
             for (int i = 0; i < aux.size(); i++)
             {
                 for(int j = 1; j < aux.size(); j++)
@@ -27,11 +28,8 @@ int main(){
                     
                     if(aux[i]==aux[j]){
                         valido = 0;
-                        break;
-                    }else{
-                        valido = 1;
-                        continue;
-                    }
+                        break;}
+                   
                   
                     
                 }
