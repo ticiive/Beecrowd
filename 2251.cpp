@@ -3,6 +3,7 @@
 using namespace std;
 
 int movimentos;
+
 int hanoi(int n){
     if (n == 1)
     {

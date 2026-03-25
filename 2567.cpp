@@ -24,17 +24,18 @@ int main(){
     {
         for (int j = 0; j < n; j++)
         {
-            if (virus[i]<virus[j])
+            if (virus[j]<virus[i])
             {
                 aux = virus[j];
                 virus[j] = virus[i];
                 virus[i] = aux;
             }
             
+            
         }
         
     }
-    
+    cout<<virus[0]<<virus[20];
 
     for (int i = 0; i < n; i++)
     {

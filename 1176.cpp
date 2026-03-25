@@ -1,6 +1,6 @@
 #include <iostream>
-long long vec[70] = {0};
-int fib(int n){
+long long vec[700] = {0};
+long fib(int n){
     if(n<=1){
         vec[n] = n;
         return n;
