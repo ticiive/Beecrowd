@@ -1,59 +1,48 @@
 #include <iostream>
+
 using namespace std;
 
 int main(){
+    int t,n,m;
 
-    int t,n,m,aux,iterador,soma,qtd;
     cin>>t;
 
-    for (int i = 0; i < t; i++)
+    for ( int i = 0; i < t; i++)
     {
-        cin>>n>>m;
-        soma = 0;
-        int vec[n];
-        iterador = 0;
-        qtd = 0;
-        for (int j = 0; j < n; j++)
-        {
-            cin>>vec[j];
-        }
-        for (int k = 0; k < n; k++)
-        {
-            for (int h = 0; h < n; h++)
-            {
-                if (vec[h]<vec[k])
-                {
-                    aux = vec[h];
-                    vec[h] = vec[k];
-                    vec[k] = aux;
-                }   
-            }  
-        }
-        while (true)
-        {
-            if (vec[iterador]>m)
-            {
-                iterador++;
-                continue;
-            }if (soma+vec[iterador]<=m)
-            {
-                soma = soma + vec[iterador];
-                qtd++;
+        
+    cin>>n>>m;
+    int v[n],pd[m];
+    pd[0] = 1;
 
-                if (soma == m)
-                {
+    for (int i = 0; i < n; i++)
+    {
+        cin>>v[i];
 
-                    break;
-                }
-                continue;
-            }else{
-                iterador++;
-                continue;
-            }
-            
-        }
-
-        cout<<qtd<<endl;
     }
     
+    for (int i = 1; i < m; i++)
+    {
+        for (int j = 0; j<n; j++)
+        {
+            if (j==0)
+            {
+               pd[i] = 999999;
+            }
+            
+            if (v[j]==i+1)
+            {
+                pd[i]=min(pd[i],pd[i-v[j]]);
+            //cout<<"pd["<<i+1<<"] = "<<pd[i]<<endl;
+            }else if (v[j]<i+1)
+            {
+            pd[i]=min(pd[i],pd[i-v[j]]+1);
+            //cout<<"pd["<<i+1<<"] = "<<pd[i]<<endl;
+            }
+            
+
+        }
+        
+    }
+    cout<<pd[m-1]<<endl;
+}
 }
